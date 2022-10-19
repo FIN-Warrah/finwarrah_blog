@@ -1,6 +1,7 @@
 site_name: FIN-Warrah's Blog
-theme: readthedocs
+theme:
+  name: material
 
 nav:
-  - Python基础:
-    - 01 基础1: python基础/基础1.md
+  - Git 与 GitHub:
+    - 1 以上传本博客到 GitHub 为例: Git与GitHub/1_以上传本博客到GitHub为例.md
