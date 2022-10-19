@@ -1,0 +1,6 @@
+site_name: FIN-Warrah's Blog
+theme: readthedocs
+
+nav:
+  - Python基础:
+    - 01 基础1: python基础/基础1.md
