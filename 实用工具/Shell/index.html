@@ -1,0 +1,864 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>Shell - FIN-Warrah's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-shell" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FIN-Warrah&#39;s Blog" class="md-header__button md-logo" aria-label="FIN-Warrah's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FIN-Warrah's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FIN-Warrah&#39;s Blog" class="md-nav__button md-logo" aria-label="FIN-Warrah's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    FIN-Warrah's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          计算机图形学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机图形学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机图形学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opengl" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          LeetCode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="LeetCode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          LeetCode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LeetCode/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92_%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        学习计划-数据结构
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          实用工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="实用工具" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          实用工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Git 与 GitHub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git 与 GitHub" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Git 与 GitHub
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git%E4%B8%8EGitHub/1_%E4%B8%8A%E4%BC%A0%E6%AD%A4%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub/" class="md-nav__link">
+        1 上传此博客到 GitHub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Shell
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Shell
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-shell" class="md-nav__link">
+    1 Shell 简介
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Shell 简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-shell" class="md-nav__link">
+    1.1 为什么学习 Shell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-shell" class="md-nav__link">
+    1.2 不同平台上有多种 Shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-shell" class="md-nav__link">
+    2 初识 Shell
+  </a>
+  
+    <nav class="md-nav" aria-label="2 初识 Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-shell-bash-ubuntu" class="md-nav__link">
+    2.1 Shell 界面 —— 以 bash 为例（操作系统为 Ubuntu）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 一些简单的命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 环境变量与路径
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 文件系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    2.5 命令的选项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        实用工具
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-shell" class="md-nav__link">
+    1 Shell 简介
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Shell 简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-shell" class="md-nav__link">
+    1.1 为什么学习 Shell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-shell" class="md-nav__link">
+    1.2 不同平台上有多种 Shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-shell" class="md-nav__link">
+    2 初识 Shell
+  </a>
+  
+    <nav class="md-nav" aria-label="2 初识 Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-shell-bash-ubuntu" class="md-nav__link">
+    2.1 Shell 界面 —— 以 bash 为例（操作系统为 Ubuntu）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 一些简单的命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 环境变量与路径
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 文件系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    2.5 命令的选项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Shell</h1>
+
+<h2 id="1-shell">1 Shell 简介</h2>
+<h4 id="11-shell">1.1 为什么学习 Shell</h4>
+<p>编程人员可以通过 Shell 向计算机发送指令，以及实现自动化。</p>
+<h2 id="12-shell">1.2 不同平台上有多种 Shell</h2>
+<ul>
+<li>Windows: PowerShell</li>
+<li>Linux: bash</li>
+<li>Mac OS: zsh</li>
+</ul>
+<h2 id="2-shell">2 初识 Shell</h2>
+<h4 id="21-shell-bash-ubuntu">2.1 Shell 界面 —— 以 bash 为例（操作系统为 Ubuntu）</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>username@ubuntu:~$
+</code></pre></div>
+<h4 id="22">2.2 一些简单的命令</h4>
+<p>显示当前时间
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>void@ubuntu:~$ date
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Wed <span class="m">19</span> Oct <span class="m">2022</span> <span class="m">09</span>:59:55 PM CST
+</code></pre></div></p>
+<p>打印特定内容。其中，<code>echo</code> 是命令，后面的是参数。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;the content you want to print&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>the content you want to print
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s1">&#39;the content you want to print&#39;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>the content you want to print
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>void@ubuntu:~$ <span class="nb">echo</span> the<span class="se">\ </span>content<span class="se">\ </span>you<span class="se">\ </span>want<span class="se">\ </span>to<span class="se">\ </span>print
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>the content you want to print
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>void@ubuntu:~$ <span class="nb">echo</span> the content you want to print
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>the content you want to print
+</code></pre></div></p>
+<h4 id="23">2.3 环境变量与路径</h4>
+<p>打印 <code>PATH</code> 环境变量（一个列表，其中的元素以 <code>:</code> 分隔）。这些 <code>PATH</code> 环境变量用于 Shell 搜索程序豁文件
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="nv">$PATH</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+</code></pre></div></p>
+<p>通过 <code>which</code> 命令，可以找到指定程序的绝对路径（执行的实际是哪个文件）
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>void@ubuntu:~$ which <span class="nb">echo</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>/usr/bin/echo
+</code></pre></div></p>
+<p>通过 <code>pwd</code> 获取当前工作路径（present working directory）
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>void@ubuntu:~$ <span class="nb">pwd</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>/home/void
+</code></pre></div></p>
+<p>通过 <code>cd</code> 切换路径
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>void@ubuntu:~$ <span class="nb">cd</span> /home
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>void@ubuntu:/home$ <span class="nb">pwd</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>/home
+</code></pre></div></p>
+<p>当前路径：<code>.</code>，父目录：<code>..</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>void@ubuntu:/home$ <span class="nb">pwd</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>/home
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>void@ubuntu:/home$ <span class="nb">cd</span> .
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>void@ubuntu:/home$ <span class="nb">pwd</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>/home
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>void@ubuntu:/home$ <span class="nb">cd</span> ..
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>void@ubuntu:/$ <span class="nb">pwd</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>/
+</code></pre></div></p>
+<p>可以通过相对路径或绝对路径的方式切换路径
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>void@ubuntu:/$ <span class="nb">cd</span> ./home
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>void@ubuntu:/home$ <span class="nb">pwd</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>/home
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>void@ubuntu:/home$ <span class="nb">cd</span> void/
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>void@ubuntu:~$ <span class="nb">pwd</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>/home/void
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>void@ubuntu:~$ <span class="nb">cd</span> /home
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>void@ubuntu:/home$ <span class="nb">pwd</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>/home
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>void@ubuntu:/home$ <span class="nb">cd</span> void
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>void@ubuntu:~$ <span class="nb">pwd</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>/home/void
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>void@ubuntu:~$ <span class="nb">cd</span> ../../
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>void@ubuntu:/$ <span class="nb">pwd</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>/
+</code></pre></div></p>
+<p>如果写了太多 <code>../</code>，不会报错，会回到根目录
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>void@ubuntu:/$ <span class="nb">cd</span> ../../../
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>void@ubuntu:/$ <span class="nb">pwd</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>/
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>void@ubuntu:/$ <span class="nb">cd</span> ../../../home
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>void@ubuntu:/home$ <span class="nb">pwd</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>/home
+</code></pre></div></p>
+<p>通过相对路径或绝对路径执行程序
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>void@ubuntu:/home$ ../../../bin/echo <span class="s2">&quot;the content you want to print&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>the content you want to print
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>void@ubuntu:/home$ /bin/echo <span class="s2">&quot;the content you want to print&quot;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>the content you want to print
+</code></pre></div></p>
+<p>参数 <code>~</code> 表示当前用户的 home
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>void@ubuntu:/home$ <span class="nb">cd</span> ~
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>void@ubuntu:~$ <span class="nb">pwd</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>/home/void
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>void@ubuntu:~$ <span class="nb">cd</span> ~/Desktop/
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>void@ubuntu:~/Desktop$ <span class="nb">pwd</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>/home/void/Desktop
+</code></pre></div></p>
+<p>通过 <code>cd -</code> 回到上一次所在的路径。注意：该功能只支持一次，不能多次回退。如果执行两次，则又返回到了执行两次 <code>cd -</code> 之前的目录。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>void@ubuntu:~$ <span class="nb">cd</span> /
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>void@ubuntu:/$ <span class="nb">cd</span> home
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>void@ubuntu:/home$ <span class="nb">cd</span> void/
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>void@ubuntu:~$ <span class="nb">pwd</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>/home/void
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>void@ubuntu:~$ <span class="nb">cd</span> -
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>/home
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>void@ubuntu:/home$ <span class="nb">cd</span> -
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>/home/void
+</code></pre></div></p>
+<h4 id="24">2.4 文件系统</h4>
+<p>通过 <code>ls</code> 查看指定目录下的目录和文件。如果不提供参数，则查看的是当前路径下的目录和文件。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>void@ubuntu:~$ ls
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>void@ubuntu:~$ ls ..
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>void
+</code></pre></div></p>
+<p>通过 <code>ls -l</code> 查看指定目录下的目录和文件，但打印的格式是“a long listing format”
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>void@ubuntu:~$ ls -l
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>total <span class="m">32</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>lrwxrwxrwx   <span class="m">1</span> root root          <span class="m">7</span> Feb  <span class="m">2</span>  <span class="m">2021</span> bin -&gt; usr/bin
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>drwxr-xr-x   <span class="m">4</span> root root       <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">21</span>:42 boot
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>drwxr-xr-x   <span class="m">2</span> root root       <span class="m">4096</span> Mar <span class="m">13</span>  <span class="m">2021</span> cdrom
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>drwxr-xr-x  <span class="m">20</span> root root       <span class="m">4120</span> Oct <span class="m">19</span> <span class="m">22</span>:06 dev
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>drwxr-xr-x <span class="m">139</span> root root      <span class="m">12288</span> Oct <span class="m">19</span> <span class="m">21</span>:56 etc
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>drwxr-xr-x   <span class="m">3</span> root root       <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">21</span>:50 home
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>lrwxrwxrwx   <span class="m">1</span> root root          <span class="m">7</span> Feb  <span class="m">2</span>  <span class="m">2021</span> lib -&gt; usr/lib
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>drwx------   <span class="m">2</span> root root      <span class="m">16384</span> Mar <span class="m">13</span>  <span class="m">2021</span> lost+found
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>drwxr-xr-x   <span class="m">3</span> root root       <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">21</span>:42 media
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>drwxr-xr-x   <span class="m">2</span> root root       <span class="m">4096</span> Feb  <span class="m">2</span>  <span class="m">2021</span> mnt
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>drwxr-xr-x   <span class="m">2</span> root root       <span class="m">4096</span> Feb  <span class="m">2</span>  <span class="m">2021</span> opt
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>dr-xr-xr-x <span class="m">264</span> root root          <span class="m">0</span> Oct <span class="m">19</span> <span class="m">21</span>:56 proc
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>drwx------   <span class="m">6</span> root root       <span class="m">4096</span> Feb <span class="m">28</span>  <span class="m">2022</span> root
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>drwxr-xr-x  <span class="m">33</span> root root        <span class="m">900</span> Oct <span class="m">19</span> <span class="m">22</span>:08 run
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>lrwxrwxrwx   <span class="m">1</span> root root          <span class="m">8</span> Feb  <span class="m">2</span>  <span class="m">2021</span> sbin -&gt; usr/sbin
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>drwxr-xr-x   <span class="m">7</span> root root       <span class="m">4096</span> Jan <span class="m">18</span>  <span class="m">2022</span> snap
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>drwxr-xr-x   <span class="m">2</span> root root       <span class="m">4096</span> Feb  <span class="m">2</span>  <span class="m">2021</span> srv
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>-rw-------   <span class="m">1</span> root root <span class="m">2147483648</span> Mar <span class="m">13</span>  <span class="m">2021</span> swap.img
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>dr-xr-xr-x  <span class="m">13</span> root root          <span class="m">0</span> Oct <span class="m">19</span> <span class="m">21</span>:56 sys
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>drwxrwxrwt  <span class="m">20</span> root root       <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">22</span>:50 tmp
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>drwxr-xr-x  <span class="m">11</span> root root       <span class="m">4096</span> Mar <span class="m">13</span>  <span class="m">2021</span> usr
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>drwxr-xr-x  <span class="m">14</span> root root       <span class="m">4096</span> Mar <span class="m">13</span>  <span class="m">2021</span> var
+</code></pre></div></p>
+<p>对于 <code>drwxr-xr-x   3 root root       4096 Oct 19 21:50 home</code>：</p>
+<ul>
+<li>第 1 位的 <code>d</code> 表示这个是目录</li>
+<li>第 2 - 4 位的 <code>rwx</code> 表示当前目录或文件的所有者对其有读、写、执行的权限；</li>
+<li>第 5 - 7 位的 <code>r-x</code> 表示当前目录或文件的所有者所在组的其他成员对其有读、执行的权限，没有写的权限；</li>
+<li>第 8 - 10 位的 <code>rw-</code> 表示当前目录或文件的所有者所在组之外的成员对其有读、执行的权限，没有写的权限。</li>
+</ul>
+<p>注意：
+* 如果对某个文件有写权限，但是对其所在的目录没有写权限，则可以清空这个文件的内容，但是不能删除这个文件。
+* 对于目录，只有当对其有执行权限时，才能访问这个目录中的内容。</p>
+<h4 id="25">2.5 命令的选项</h4>
+<p>通过 <code>--help</code> 查看帮助信息（部分程序可以通过 <code>-h</code> 达到相同效果）
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>void@ubuntu:~$ ls --help
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Usage: ls <span class="o">[</span>OPTION<span class="o">]</span>... <span class="o">[</span>FILE<span class="o">]</span>...
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>List information about the FILEs <span class="o">(</span>the current directory by default<span class="o">)</span>.
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Sort entries alphabetically <span class="k">if</span> none of -cftuvSUX nor --sort is specified.
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>Mandatory arguments to long options are mandatory <span class="k">for</span> short options too.
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  -a, --all                  <span class="k">do</span> not ignore entries starting with .
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  -A, --almost-all           <span class="k">do</span> not list implied . and ..
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>      --author               with -l, print the author of each file
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="o">(</span>在这里省略了后面的内容，有兴趣的话可以自己执行试一试<span class="o">)</span>
+</code></pre></div></p>
+<h2 id="_1">参考</h2>
+<ul>
+<li><a href="https://missing.csail.mit.edu/2020/course-shell/">MIT-Missing-Semester</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Git%E4%B8%8EGitHub/1_%E4%B8%8A%E4%BC%A0%E6%AD%A4%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1 上传此博客到 GitHub" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              1 上传此博客到 GitHub
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" class="md-footer__link md-footer__link--next" aria-label="Next: 实用工具" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              实用工具
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>
