@@ -640,30 +640,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    8 工具推荐
+  <a href="#8-data-wrangling" class="md-nav__link">
+    8 数据整理（Data wrangling）
   </a>
   
-    <nav class="md-nav" aria-label="8 工具推荐">
+    <nav class="md-nav" aria-label="8 数据整理（Data wrangling）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-ripgrep" class="md-nav__link">
-    8.1 ripgrep 示例
+  <a href="#81" class="md-nav__link">
+    8.1 对命令的输出进行筛选
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-fzf" class="md-nav__link">
-    8.2 fzf 示例
+  <a href="#82" class="md-nav__link">
+    8.2 对流的内容进行替换、统计、筛选与处理
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#84-tree" class="md-nav__link">
-    8.4 tree 示例
+  <a href="#83" class="md-nav__link">
+    8.3 二进制文件处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9 工具推荐
+  </a>
+  
+    <nav class="md-nav" aria-label="9 工具推荐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-ripgrep" class="md-nav__link">
+    9.1 ripgrep 示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-fzf" class="md-nav__link">
+    9.2 fzf 示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-tree" class="md-nav__link">
+    9.3 tree 示例
   </a>
   
 </li>
@@ -996,30 +1030,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    8 工具推荐
+  <a href="#8-data-wrangling" class="md-nav__link">
+    8 数据整理（Data wrangling）
   </a>
   
-    <nav class="md-nav" aria-label="8 工具推荐">
+    <nav class="md-nav" aria-label="8 数据整理（Data wrangling）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-ripgrep" class="md-nav__link">
-    8.1 ripgrep 示例
+  <a href="#81" class="md-nav__link">
+    8.1 对命令的输出进行筛选
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-fzf" class="md-nav__link">
-    8.2 fzf 示例
+  <a href="#82" class="md-nav__link">
+    8.2 对流的内容进行替换、统计、筛选与处理
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#84-tree" class="md-nav__link">
-    8.4 tree 示例
+  <a href="#83" class="md-nav__link">
+    8.3 二进制文件处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9 工具推荐
+  </a>
+  
+    <nav class="md-nav" aria-label="9 工具推荐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-ripgrep" class="md-nav__link">
+    9.1 ripgrep 示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-fzf" class="md-nav__link">
+    9.2 fzf 示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-tree" class="md-nav__link">
+    9.3 tree 示例
   </a>
   
 </li>
@@ -1869,7 +1937,137 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
 <a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="k">for</span> arg <span class="k">in</span> reversed<span class="o">(</span>sys.argv<span class="o">[</span><span class="m">1</span>:<span class="o">])</span>:
 <a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>    print<span class="o">(</span>arg<span class="o">)</span>
 </code></pre></div></p>
-<h2 id="8">8 工具推荐</h2>
+<h2 id="8-data-wrangling">8 数据整理（Data wrangling）</h2>
+<h4 id="81">8.1 对命令的输出进行筛选</h4>
+<p><code>journalctl</code> 用于查看系统日志，通过 <code>grep</code> 对其进行筛选
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>void@ubuntu:~$ journalctl <span class="p">|</span> grep ssh
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>Hint: You are currently not seeing messages from other users and the system.
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>      Users <span class="k">in</span> groups <span class="s1">&#39;adm&#39;</span>, <span class="s1">&#39;systemd-journal&#39;</span> can see all messages.
+<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>      Pass -q to turn off this notice.
+<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a>Feb <span class="m">28</span> <span class="m">15</span>:16:13 ubuntu-linux-20-04-desktop systemd<span class="o">[</span><span class="m">3904</span><span class="o">]</span>: Listening on GnuPG cryptographic agent <span class="o">(</span>ssh-agent emulation<span class="o">)</span>.
+<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a>Feb <span class="m">28</span> <span class="m">15</span>:16:14 ubuntu-linux-20-04-desktop systemd<span class="o">[</span><span class="m">3904</span><span class="o">]</span>: ssh-agent.service: Succeeded.
+<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a>Feb <span class="m">28</span> <span class="m">15</span>:16:14 ubuntu-linux-20-04-desktop gnome-keyring-ssh.desktop<span class="o">[</span><span class="m">4168</span><span class="o">]</span>: <span class="nv">SSH_AUTH_SOCK</span><span class="o">=</span>/run/user/1001/keyring/ssh
+<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>Aug <span class="m">17</span> <span class="m">23</span>:02:09 ubuntu-linux-20-04-desktop systemd<span class="o">[</span><span class="m">1225</span><span class="o">]</span>: Listening on GnuPG cryptographic agent <span class="o">(</span>ssh-agent emulation<span class="o">)</span>.
+<a id="__codelineno-66-9" name="__codelineno-66-9" href="#__codelineno-66-9"></a>Aug <span class="m">17</span> <span class="m">23</span>:02:17 ubuntu-linux-20-04-desktop systemd<span class="o">[</span><span class="m">1225</span><span class="o">]</span>: ssh-agent.service: Succeeded.
+<a id="__codelineno-66-10" name="__codelineno-66-10" href="#__codelineno-66-10"></a>Aug <span class="m">17</span> <span class="m">23</span>:02:17 ubuntu-linux-20-04-desktop gnome-keyring-ssh.desktop<span class="o">[</span><span class="m">1875</span><span class="o">]</span>: <span class="nv">SSH_AUTH_SOCK</span><span class="o">=</span>/run/user/1001/keyring/ssh
+<a id="__codelineno-66-11" name="__codelineno-66-11" href="#__codelineno-66-11"></a>Aug <span class="m">17</span> <span class="m">23</span>:04:58 ubuntu-linux-20-04-desktop systemd<span class="o">[</span><span class="m">1225</span><span class="o">]</span>: gnome-keyring-ssh.service: Succeeded.
+<a id="__codelineno-66-12" name="__codelineno-66-12" href="#__codelineno-66-12"></a><span class="o">(</span>在这里省略了后面的内容，有兴趣的话可以自己执行试一试<span class="o">)</span>
+</code></pre></div>
+可以通过 <code>ssh</code> 连接远程机器并执行上述命令，如：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>ssh myserver journalctl <span class="p">|</span> grep ssh
+</code></pre></div></p>
+<p>还可以进一步筛选
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>void@ubuntu:~$ ssh myserver journalctl <span class="p">|</span> grep ssh <span class="p">|</span> grep <span class="s2">&quot;Disconnected from&quot;</span> 
+</code></pre></div>
+注：这种方式是从远程机器传输系统日志到本地，然后筛选</p>
+<p>通过下面这种方式可以将整条命令在远程机器运行
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep ssh | grep &quot;Disconnected from&quot;&#39;</span> 
+</code></pre></div></p>
+<p>也可以通过 <code>less</code> 查看这个命令打印的内容
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep ssh | grep &quot;Disconnected from&quot;&#39;</span> <span class="p">|</span> less
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep --line-buffer ssh | grep --line-buffer &quot;Disconnected from&quot;&#39;</span> <span class="p">|</span> less
+</code></pre></div>
+<h4 id="82">8.2 对流的内容进行替换、统计、筛选与处理</h4>
+<p>通过 <code>sed</code>对流的内容进行替换.</p>
+<p>第一个 <code>/</code> 和第二个 <code>/</code> 之间填写要被替换的内容，第二个 <code>/</code> 和第三个 <code>/</code> 之间填写用于替换的内容，第三个 <code>/</code> 之后填写选项。</p>
+<p>使用“”替换“每一行开头直到 Disconnected from”
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep --line-buffer ssh | grep --line-buffer &quot;Disconnected from&quot;&#39;</span> &gt; ssh.log
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed <span class="s1">&#39;s/.*Disconnected from //&#39;</span>
+</code></pre></div>
+注：正则表达式</p>
+<ul>
+<li><code>.</code>：任意单个字符</li>
+<li><code>*</code>：这之前的字符重复任意（0 到正无穷）次</li>
+<li><code>+</code>：这之前的字符重复至少 1 次</li>
+<li><code>?</code>：这之前的字符出现 0 次火 1 次</li>
+<li><code>[一些字符]</code>：匹配这些字符的其中之一，如 <code>[ab]</code></li>
+<li><code>`()</code>：括号中的内容是完整的字符串</li>
+<li><code>|</code>：表示“或”</li>
+<li>对字符串中的组（group）进行捕获（capture）：<code>()</code> 中的即为组，一个正则表达式中可以有多个组。通过 <code>\组号</code> 重新获取组中的内容（组号从 1 开始）</li>
+<li>锚定（anchor）正则表达式：<code>^</code> 表示字符串的开头，<code>$</code> 表示正则表达式的结尾</li>
+<li>默认只匹配一次。如果在 <code>sed</code> 要匹配所有的，则在最后一个 <code>/</code> 后添加 <code>g</code></li>
+<li>默认匹配符合条件的最长的字符串（贪婪匹配）。在 <code>*</code> 或 <code>+</code> 后面加上 <code>?</code>，则变成非贪婪匹配</li>
+<li>正则表达式默认不会跨行匹配</li>
+</ul>
+<p>示例
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//&#39;</span>
+<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>bc
+<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;bc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//&#39;</span>
+<a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a>c
+<a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//g&#39;</span>
+<a id="__codelineno-73-6" name="__codelineno-73-6" href="#__codelineno-73-6"></a>c
+</code></pre></div></p>
+<p><code>sed</code> 不支持一些正则表达式规则，需要添加 <code>-E</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/(ab)*//g&#39;</span>
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>abcabc
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab)*//g&#39;</span>
+<a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>cc
+<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab|bc)*//g&#39;</span>
+<a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a>cc
+<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;bcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab|bc)*//g&#39;</span>
+<a id="__codelineno-74-8" name="__codelineno-74-8" href="#__codelineno-74-8"></a>c
+</code></pre></div></p>
+<p>使用更复杂一点的正则表达式进行匹配与替换
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;sample_string Disconnected from user username 127.0.0.1 port 1234&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user .* [0-9.]+ port [0-9]+$/changed string/&#39;</span>
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>changed string
+</code></pre></div></p>
+<p>捕获正则表达式中的组
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;sample_string Disconnected from user username 127.0.0.1 port 1234&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span>
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>username
+</code></pre></div></p>
+<p>正则表达式调试器：regex101.com
+<img alt="regex101.com" src="/assets/imgs/实用技术_数据处理_1.png" /></p>
+<p>正则表达式相关网站</p>
+<ul>
+<li><a href="https://www.regular-expressions.info/email.html">How to Find or Validate an Email Address</a></li>
+<li><a href="https://mathiasbynens.be/demo/url-regex">In search of the perfect URL validation regex</a></li>
+<li><a href="https://fightingforalostcause.net/content/misc/2006/compare-email-regex.php">Comparing E-mail Address Validating Regular Expressions</a></li>
+<li><a href="emailregex.com">Email Address Regular Expression That 99.99% Works. Disagree? Join discussion!</a></li>
+</ul>
+<p>通过 <code>wc -l</code> 统计行数</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> wc -l
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="m">117</span>
+</code></pre></div>
+<p>通过 <code>sort</code> 进行排序；</p>
+<p>通过 <code>uniq</code> 将多次出现的相同内容变成一次，<code>unic -c</code> 可以在打印值的同时显示每个值出现的次数</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> wc -l
+</code></pre></div>
+<p><code>awk</code> 与 <code>paste</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span> <span class="p">|</span> paste -sd,
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;$1 == 1 &amp;&amp; $2 ~ /^c.*e$/ {print $0}&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;BEGIN { rows = 0 } $1 == 1 &amp;&amp; $2 ~ /^c.*e$/ { rows += 1 } END { print rows }&#39;</span>
+</code></pre></div>
+<p>通过 <code>xargs</code> 接收列表并转换为参数（arguments）
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>void@ubuntu:~$ rustup toolchain list <span class="p">|</span> grep nightly <span class="p">|</span> grep -v <span class="s1">&#39;nightly-x86&#39;</span> <span class="p">|</span> grep <span class="m">2019</span> <span class="p">|</span> sed <span class="s1">&#39;s/-x86.*//&#39;</span> <span class="p">|</span> xargs rustup toolchain uninstall
+</code></pre></div></p>
+<p>打印出来处理后的到的命令
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>void@ubuntu:~$ rustup toolchain list <span class="p">|</span> grep nightly <span class="p">|</span> grep -v <span class="s1">&#39;nightly-x86&#39;</span> <span class="p">|</span> grep <span class="m">2019</span> <span class="p">|</span> sed <span class="s1">&#39;s/-x86.*//&#39;</span> <span class="p">|</span> xargs <span class="nb">echo</span> rustup toolchain uninstall 
+</code></pre></div></p>
+<p>通过 <code>bc</code> (Berkeley Calculator) 进行计算
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;1 + 2&quot;</span> <span class="p">|</span> bc -l
+<a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a><span class="m">3</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> awk <span class="s1">&#39;$1 != 1 { print $1 }&#39;</span> <span class="p">|</span> paste -sd+ <span class="p">|</span> bc -l
+</code></pre></div>
+<p>通过 R 语言进行计算
+<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> awk <span class="s1">&#39;$1 != 1 { print $1 }&#39;</span> <span class="p">|</span> R --slave -e <span class="s1">&#39;x &lt;- scan(file=&quot;stdin&quot;, quiet=TRUE); summary(x)&#39;</span>
+</code></pre></div></p>
+<p>通过 <code>gnuplot</code> 绘图</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n5 <span class="p">|</span> gnuplot -p -e <span class="s1">&#39;set boxwidth 0.5; plot &quot;-&quot; using 1:xtic(2) with boxes&#39;</span>
+</code></pre></div>
+<h4 id="83">8.3 二进制文件处理</h4>
+<p>从视频中提取第一帧，转换为图像，将颜色空间转换为灰色，然后压缩，并通过 <code>ssh</code> 传输到远程机器，在远程机器保存，然后传回来
+<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>void@ubuntu:~$ ffmpeg -loglevel panic -i /dev/video0 -frame <span class="m">1</span> -f image2 - <span class="p">|</span> convert - -colorspace gray - <span class="p">|</span> gzip <span class="p">|</span> ssh myserver <span class="s1">&#39;gzip -d | tee copy.png&#39;</span> <span class="p">|</span> feh -
+</code></pre></div>
+其中，<code>/dev/video0</code> 为摄像头，<code>-</code> 表示标准输出、标准输入</p>
+<h2 id="9">9 工具推荐</h2>
 <ul>
 <li>ripgrep：命令为 <code>rg</code>，可以使用 <code>man rg</code> 查看手册），用于代替 grep</li>
 <li>convert</li>
@@ -1883,79 +2081,83 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
 <li>zsh 对历史字串搜索的实现（如果当前输入的命令和历史记录的前缀相同，则自动提示，敲击右箭头补全）</li>
 <li>ack：另一个 grep 的替代品</li>
 <li>ag：另一个 grep 的替代品</li>
+<li>awk：适用于对列进行操作</li>
+<li>bc：Berkeley Calculator</li>
+<li>R：适合用于统计计算和绘图的语言和操作环境</li>
+<li>gnuplot：根据数据进行绘图</li>
 </ul>
-<h4 id="81-ripgrep">8.1 <code>ripgrep</code> 示例</h4>
+<h4 id="91-ripgrep">9.1 <code>ripgrep</code> 示例</h4>
 <p>一个简单的示例
-<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>username@ubuntu:~/tools$ rg <span class="s2">&quot;Python&quot;</span> -t py .
-<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>./test.py
-<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a><span class="m">3</span>:print<span class="o">(</span><span class="s2">&quot;This a test Python script.&quot;</span><span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a>username@ubuntu:~/tools$ rg <span class="s2">&quot;Python&quot;</span> -t py .
+<a id="__codelineno-91-2" name="__codelineno-91-2" href="#__codelineno-91-2"></a>./test.py
+<a id="__codelineno-91-3" name="__codelineno-91-3" href="#__codelineno-91-3"></a><span class="m">3</span>:print<span class="o">(</span><span class="s2">&quot;This a test Python script.&quot;</span><span class="o">)</span> 
 </code></pre></div></p>
 <p><code>-C</code> 可以打印指定数量的上下文。例如，<code>-C 5</code>，则一共打印 11 行，需要查找的那一行在最中间
-<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>username@ubuntu:~/tools$ rg <span class="s2">&quot;Python&quot;</span> -t py -C <span class="m">5</span> .
-<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>./test.py
-<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="m">1</span>-#!/usr/bin/env python
-<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a><span class="m">2</span>-
-<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a><span class="m">3</span>:print<span class="o">(</span><span class="s2">&quot;This a test Python script.&quot;</span><span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a>username@ubuntu:~/tools$ rg <span class="s2">&quot;Python&quot;</span> -t py -C <span class="m">5</span> .
+<a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>./test.py
+<a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a><span class="m">1</span>-#!/usr/bin/env python
+<a id="__codelineno-92-4" name="__codelineno-92-4" href="#__codelineno-92-4"></a><span class="m">2</span>-
+<a id="__codelineno-92-5" name="__codelineno-92-5" href="#__codelineno-92-5"></a><span class="m">3</span>:print<span class="o">(</span><span class="s2">&quot;This a test Python script.&quot;</span><span class="o">)</span>
 </code></pre></div></p>
 <p><code>-u</code> 表示不忽略隐藏文件，<code>--files-without-match</code> 表示要查找的文件不能符合后面给出的模式
-<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#!&quot;</span> -t py .
-<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>username@ubuntu:~/tools$ touch test2.py
-<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#!&quot;</span> -t py .
-<a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a>./test2.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#!&quot;</span> -t py .
+<a id="__codelineno-93-2" name="__codelineno-93-2" href="#__codelineno-93-2"></a>username@ubuntu:~/tools$ touch test2.py
+<a id="__codelineno-93-3" name="__codelineno-93-3" href="#__codelineno-93-3"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#!&quot;</span> -t py .
+<a id="__codelineno-93-4" name="__codelineno-93-4" href="#__codelineno-93-4"></a>./test2.py
 </code></pre></div>
 注：对 <code>!</code> 转义的时候报错了，暂时不知道原因
-<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#\!&quot;</span> -t py .
-<a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>regex parse error:
-<a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>    ^#<span class="se">\!</span>
-<a id="__codelineno-69-4" name="__codelineno-69-4" href="#__codelineno-69-4"></a>      ^^
-<a id="__codelineno-69-5" name="__codelineno-69-5" href="#__codelineno-69-5"></a>error: unrecognized escape sequence
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#\!&quot;</span> -t py .
+<a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a>regex parse error:
+<a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a>    ^#<span class="se">\!</span>
+<a id="__codelineno-94-4" name="__codelineno-94-4" href="#__codelineno-94-4"></a>      ^^
+<a id="__codelineno-94-5" name="__codelineno-94-5" href="#__codelineno-94-5"></a>error: unrecognized escape sequence
 </code></pre></div></p>
 <p><code>--status</code> 会令 <code>rg</code> 显示信息
-<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#!&quot;</span> -t py --stats .
-<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>./test2.py
-<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>
-<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a><span class="m">1</span> matches
-<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a><span class="m">1</span> matched lines
-<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a><span class="m">1</span> files contained matches
-<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a><span class="m">2</span> files searched
-<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a><span class="m">0</span> bytes printed
-<a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a><span class="m">59</span> bytes searched
-<a id="__codelineno-70-10" name="__codelineno-70-10" href="#__codelineno-70-10"></a><span class="m">0</span>.000019 seconds spent searching
-<a id="__codelineno-70-11" name="__codelineno-70-11" href="#__codelineno-70-11"></a><span class="m">0</span>.002911 seconds
+<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a>username@ubuntu:~/tools$ rg -u --files-without-match <span class="s2">&quot;^#!&quot;</span> -t py --stats .
+<a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a>./test2.py
+<a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a>
+<a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a><span class="m">1</span> matches
+<a id="__codelineno-95-5" name="__codelineno-95-5" href="#__codelineno-95-5"></a><span class="m">1</span> matched lines
+<a id="__codelineno-95-6" name="__codelineno-95-6" href="#__codelineno-95-6"></a><span class="m">1</span> files contained matches
+<a id="__codelineno-95-7" name="__codelineno-95-7" href="#__codelineno-95-7"></a><span class="m">2</span> files searched
+<a id="__codelineno-95-8" name="__codelineno-95-8" href="#__codelineno-95-8"></a><span class="m">0</span> bytes printed
+<a id="__codelineno-95-9" name="__codelineno-95-9" href="#__codelineno-95-9"></a><span class="m">59</span> bytes searched
+<a id="__codelineno-95-10" name="__codelineno-95-10" href="#__codelineno-95-10"></a><span class="m">0</span>.000019 seconds spent searching
+<a id="__codelineno-95-11" name="__codelineno-95-11" href="#__codelineno-95-11"></a><span class="m">0</span>.002911 seconds
 </code></pre></div></p>
-<h4 id="82-fzf">8.2 <code>fzf</code> 示例</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>username@ubuntu:~/tools$ fzf
-<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>（由于是交互式的，这里就不展示打印的内容了）
+<h4 id="92-fzf">9.2 <code>fzf</code> 示例</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a>username@ubuntu:~/tools$ fzf
+<a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a>（由于是交互式的，这里就不展示打印的内容了）
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>username@ubuntu:~/tools$ cat test.py <span class="p">|</span> fzf
-<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>（由于是交互式的，这里就不展示打印的内容了）
+<div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a>username@ubuntu:~/tools$ cat test.py <span class="p">|</span> fzf
+<a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a>（由于是交互式的，这里就不展示打印的内容了）
 </code></pre></div>
 <p>注：
 (1) 在使用 fzf 之前，在 terminal 粘贴了命令
-<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>username@ubuntu:~/tools$ <span class="o">[</span> -f ~/.fzf.zsh <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.fzf.zsh
+<div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>username@ubuntu:~/tools$ <span class="o">[</span> -f ~/.fzf.zsh <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.fzf.zsh
 </code></pre></div>
 暂未知道其意义，在执行上述 <code>fzf</code> 命令之前未执行这个命令，上述 <code>fzf</code> 命令也正常运行了</p>
 <p>(2) 提到了将 <code>Ctrl+R</code> 和 fzf 绑定，但是我没有理解如何实现</p>
-<h4 id="84-tree">8.4 <code>tree</code> 示例</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>username@ubuntu:~/tools$ tree .
-<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>.
-<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>├── test1
-<a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>├── test2
-<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a>│   └── test3
-<a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a>├── test2.py
-<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a>└── test.py
-<a id="__codelineno-74-8" name="__codelineno-74-8" href="#__codelineno-74-8"></a>
-<a id="__codelineno-74-9" name="__codelineno-74-9" href="#__codelineno-74-9"></a><span class="m">3</span> directories, <span class="m">2</span> files
-<a id="__codelineno-74-10" name="__codelineno-74-10" href="#__codelineno-74-10"></a>username@ubuntu:~/tools$ <span class="nb">cd</span> ../
-<a id="__codelineno-74-11" name="__codelineno-74-11" href="#__codelineno-74-11"></a>username@ubuntu:~$ tree tools
-<a id="__codelineno-74-12" name="__codelineno-74-12" href="#__codelineno-74-12"></a>tools
-<a id="__codelineno-74-13" name="__codelineno-74-13" href="#__codelineno-74-13"></a>├── test1
-<a id="__codelineno-74-14" name="__codelineno-74-14" href="#__codelineno-74-14"></a>├── test2
-<a id="__codelineno-74-15" name="__codelineno-74-15" href="#__codelineno-74-15"></a>│   └── test3
-<a id="__codelineno-74-16" name="__codelineno-74-16" href="#__codelineno-74-16"></a>├── test2.py
-<a id="__codelineno-74-17" name="__codelineno-74-17" href="#__codelineno-74-17"></a>└── test.py
-<a id="__codelineno-74-18" name="__codelineno-74-18" href="#__codelineno-74-18"></a>
-<a id="__codelineno-74-19" name="__codelineno-74-19" href="#__codelineno-74-19"></a><span class="m">3</span> directories, <span class="m">2</span> files
+<h4 id="93-tree">9.3 <code>tree</code> 示例</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>username@ubuntu:~/tools$ tree .
+<a id="__codelineno-99-2" name="__codelineno-99-2" href="#__codelineno-99-2"></a>.
+<a id="__codelineno-99-3" name="__codelineno-99-3" href="#__codelineno-99-3"></a>├── test1
+<a id="__codelineno-99-4" name="__codelineno-99-4" href="#__codelineno-99-4"></a>├── test2
+<a id="__codelineno-99-5" name="__codelineno-99-5" href="#__codelineno-99-5"></a>│   └── test3
+<a id="__codelineno-99-6" name="__codelineno-99-6" href="#__codelineno-99-6"></a>├── test2.py
+<a id="__codelineno-99-7" name="__codelineno-99-7" href="#__codelineno-99-7"></a>└── test.py
+<a id="__codelineno-99-8" name="__codelineno-99-8" href="#__codelineno-99-8"></a>
+<a id="__codelineno-99-9" name="__codelineno-99-9" href="#__codelineno-99-9"></a><span class="m">3</span> directories, <span class="m">2</span> files
+<a id="__codelineno-99-10" name="__codelineno-99-10" href="#__codelineno-99-10"></a>username@ubuntu:~/tools$ <span class="nb">cd</span> ../
+<a id="__codelineno-99-11" name="__codelineno-99-11" href="#__codelineno-99-11"></a>username@ubuntu:~$ tree tools
+<a id="__codelineno-99-12" name="__codelineno-99-12" href="#__codelineno-99-12"></a>tools
+<a id="__codelineno-99-13" name="__codelineno-99-13" href="#__codelineno-99-13"></a>├── test1
+<a id="__codelineno-99-14" name="__codelineno-99-14" href="#__codelineno-99-14"></a>├── test2
+<a id="__codelineno-99-15" name="__codelineno-99-15" href="#__codelineno-99-15"></a>│   └── test3
+<a id="__codelineno-99-16" name="__codelineno-99-16" href="#__codelineno-99-16"></a>├── test2.py
+<a id="__codelineno-99-17" name="__codelineno-99-17" href="#__codelineno-99-17"></a>└── test.py
+<a id="__codelineno-99-18" name="__codelineno-99-18" href="#__codelineno-99-18"></a>
+<a id="__codelineno-99-19" name="__codelineno-99-19" href="#__codelineno-99-19"></a><span class="m">3</span> directories, <span class="m">2</span> files
 </code></pre></div>
 <h2 id="_1">参考</h2>
 <ul>

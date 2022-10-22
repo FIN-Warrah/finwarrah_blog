@@ -450,7 +450,7 @@
         
           <li class="md-nav__item">
   <a href="#12" class="md-nav__link">
-    1.2 对流的内容进行替换
+    1.2 对流的内容进行替换和统计
   </a>
   
 </li>
@@ -530,7 +530,7 @@
         
           <li class="md-nav__item">
   <a href="#12" class="md-nav__link">
-    1.2 对流的内容进行替换
+    1.2 对流的内容进行替换和统计
   </a>
   
 </li>
@@ -593,7 +593,7 @@
 </code></pre></div></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep --line-buffer ssh | grep --line-buffer &quot;Disconnected from&quot;&#39;</span> <span class="p">|</span> less
 </code></pre></div>
-<h4 id="12">1.2 对流的内容进行替换</h4>
+<h4 id="12">1.2 对流的内容进行替换和统计</h4>
 <p>通过 <code>sed</code>对流的内容进行替换.</p>
 <p>第一个 <code>/</code> 和第二个 <code>/</code> 之间填写要被替换的内容，第二个 <code>/</code> 和第三个 <code>/</code> 之间填写用于替换的内容，第三个 <code>/</code> 之后填写选项。</p>
 <p>使用“”替换“每一行开头直到 Disconnected from”
@@ -612,7 +612,8 @@
 <li>对字符串中的组（group）进行捕获（capture）：<code>()</code> 中的即为组，一个正则表达式中可以有多个组。通过 <code>\组号</code> 重新获取组中的内容（组号从 1 开始）</li>
 <li>锚定（anchor）正则表达式：<code>^</code> 表示字符串的开头，<code>$</code> 表示正则表达式的结尾</li>
 <li>默认只匹配一次。如果在 <code>sed</code> 要匹配所有的，则在最后一个 <code>/</code> 后添加 <code>g</code></li>
-<li>默认匹配符合条件的最长的字符串（贪婪匹配）</li>
+<li>默认匹配符合条件的最长的字符串（贪婪匹配）。在 <code>*</code> 或 <code>+</code> 后面加上 <code>?</code>，则变成非贪婪匹配</li>
+<li>正则表达式默认不会跨行匹配</li>
 </ul>
 <p>示例
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//&#39;</span>
@@ -640,7 +641,15 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;sample_string Disconnected from user username 127.0.0.1 port 1234&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>username
 </code></pre></div></p>
-<p>正则表达式调试器：regex101.com</p>
+<p>正则表达式调试器：regex101.com
+<img alt="regex101.com" src="/assets/imgs/实用技术_数据处理_1.png" /></p>
+<p>正则表达式相关网站</p>
+<ul>
+<li><a href="https://www.regular-expressions.info/email.html">How to Find or Validate an Email Address</a></li>
+<li><a href="https://mathiasbynens.be/demo/url-regex">In search of the perfect URL validation regex</a></li>
+<li><a href="https://fightingforalostcause.net/content/misc/2006/compare-email-regex.php">Comparing E-mail Address Validating Regular Expressions</a></li>
+<li><a href="emailregex.com">Email Address Regular Expression That 99.99% Works. Disagree? Join discussion!</a></li>
+</ul>
 
 
 
