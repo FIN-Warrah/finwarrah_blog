@@ -31,7 +31,7 @@ repo_url: https://github.com/FIN-Warrah/finwarrah_blog/
 
 nav:
   - 计算机图形学:
-    # - opengl
+    - opengl: 未完成.md
   - LeetCode:
     - 学习计划-数据结构: LeetCode/学习计划_数据结构.md
   - 实用技术: 
