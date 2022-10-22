@@ -1,6 +1,24 @@
 site_name: FIN-Warrah's Blog
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
+  # palette:
+  #   - media: "(prefers-color-scheme: light)"
+  #     scheme: default
+  #     # primary: 
+  #     accent: deep purple
+  #     toggle:
+  #       icon: material/weather-sunny
+  #       name: Switch to dark mode
+  #   - media: "(prefers-color-scheme: dark)"
+  #     scheme: slate
+  #     primary: cyan
+  #     accent: deep purple
+  #     toggle:
+  #       icon: material/weather-night
+  #       name: Switch to light mode
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -8,13 +26,23 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
+repo_name: FIN-Warrah's Blog
+repo_url: https://github.com/FIN-Warrah/finwarrah_blog/
+
 nav:
   - 计算机图形学:
     - opengl
   - LeetCode:
     - 学习计划-数据结构: LeetCode/学习计划_数据结构.md
-  - 实用工具: 
+  - 实用技术: 
     - Git 与 GitHub:
-      - 1 上传此博客到 GitHub: 实用工具/Git与GitHub/1_上传此博客到GitHub.md
-    - Shell: 实用工具/Shell.md
-    - 实用工具: 实用工具/实用工具.md
+      - 1 上传此博客到 GitHub: 实用技术/Git与GitHub/1_上传此博客到GitHub.md
+    - Shell: 实用技术/Shell.md
+    - Vim: 实用技术/Vim.md
+    - 数据整理: 实用技术/数据整理.md
+    - 实用工具: 实用技术/实用工具.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FIN-Warrah/
