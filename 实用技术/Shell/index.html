@@ -231,7 +231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../未完成.md" class="md-nav__link">
+      <a href="../../%E6%9C%AA%E5%AE%8C%E6%88%90/" class="md-nav__link">
         opengl
       </a>
     </li>
@@ -729,6 +729,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%8E%AF%E5%A2%83/" class="md-nav__link">
+        命令行环境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Vim/" class="md-nav__link">
         Vim
       </a>
@@ -745,6 +759,82 @@
     <li class="md-nav__item">
       <a href="../%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" class="md-nav__link">
         实用工具
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          深度学习
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="深度学习" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          深度学习
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%AA%E5%AE%8C%E6%88%90/" class="md-nav__link">
+        计算机视觉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%AA%E5%AE%8C%E6%88%90/" class="md-nav__link">
+        自然语言处理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%AA%E5%AE%8C%E6%88%90/" class="md-nav__link">
+        异常检测
       </a>
     </li>
   
@@ -1640,11 +1730,11 @@
 <h4 id="210">2.10 命令管理</h4>
 <p>通过 敲击上箭头 查看之前的命令</p>
 <p>通过 <code>history</code> 查看历史命令</p>
-<p>通过 <code>Ctrl+R</code> 向后查找历史记录
+<p>通过 <code>Ctrl + R</code> 向后查找历史记录
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="o">(</span>reverse-i-search<span class="o">)</span><span class="sb">`</span>convert<span class="err">&#39;</span>: <span class="nb">history</span> <span class="m">1</span> <span class="p">|</span> grep convert
 </code></pre></div>
 其中，第二行左侧的 <code>convert</code> 是我键入的。</p>
-<p>再次按  <code>Ctrl+R</code>，会显示更早的包含 <code>convert</code> 的历史记录。</p>
+<p>再次按  <code>Ctrl + R</code>，会显示更早的包含 <code>convert</code> 的历史记录。</p>
 <p>然后按 <code>Enter</code>，则会执行命令。</p>
 <h2 id="3-stream">3 流（stream）</h2>
 <p>每个程序默认都有输入流和输出流。输入流默认是键盘。输出流默认是 terminal。Shell 提供了改变输入流和输出流的功能。</p>
@@ -1926,7 +2016,7 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
 <h2 id="8-data-wrangling">8 数据整理（Data wrangling）</h2>
 <h4 id="81">8.1 对命令的输出进行筛选</h4>
 <p><code>journalctl</code> 用于查看系统日志，通过 <code>grep</code> 对其进行筛选
-<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>void@ubuntu:~$ journalctl <span class="p">|</span> grep ssh
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>username@ubuntu:~$ journalctl <span class="p">|</span> grep ssh
 <a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>Hint: You are currently not seeing messages from other users and the system.
 <a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>      Users <span class="k">in</span> groups <span class="s1">&#39;adm&#39;</span>, <span class="s1">&#39;systemd-journal&#39;</span> can see all messages.
 <a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>      Pass -q to turn off this notice.
@@ -1943,23 +2033,23 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>ssh myserver journalctl <span class="p">|</span> grep ssh
 </code></pre></div></p>
 <p>还可以进一步筛选
-<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>void@ubuntu:~$ ssh myserver journalctl <span class="p">|</span> grep ssh <span class="p">|</span> grep <span class="s2">&quot;Disconnected from&quot;</span> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>username@ubuntu:~$ ssh myserver journalctl <span class="p">|</span> grep ssh <span class="p">|</span> grep <span class="s2">&quot;Disconnected from&quot;</span> 
 </code></pre></div>
 注：这种方式是从远程机器传输系统日志到本地，然后筛选</p>
 <p>通过下面这种方式可以将整条命令在远程机器运行
-<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep ssh | grep &quot;Disconnected from&quot;&#39;</span> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>username@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep ssh | grep &quot;Disconnected from&quot;&#39;</span> 
 </code></pre></div></p>
 <p>也可以通过 <code>less</code> 查看这个命令打印的内容
-<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep ssh | grep &quot;Disconnected from&quot;&#39;</span> <span class="p">|</span> less
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>username@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep ssh | grep &quot;Disconnected from&quot;&#39;</span> <span class="p">|</span> less
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep --line-buffer ssh | grep --line-buffer &quot;Disconnected from&quot;&#39;</span> <span class="p">|</span> less
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>username@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep --line-buffer ssh | grep --line-buffer &quot;Disconnected from&quot;&#39;</span> <span class="p">|</span> less
 </code></pre></div>
 <h4 id="82">8.2 对流的内容进行替换、统计、筛选与处理</h4>
 <p>通过 <code>sed</code>对流的内容进行替换.</p>
 <p>第一个 <code>/</code> 和第二个 <code>/</code> 之间填写要被替换的内容，第二个 <code>/</code> 和第三个 <code>/</code> 之间填写用于替换的内容，第三个 <code>/</code> 之后填写选项。</p>
 <p>使用“”替换“每一行开头直到 Disconnected from”
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>void@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep --line-buffer ssh | grep --line-buffer &quot;Disconnected from&quot;&#39;</span> &gt; ssh.log
-<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed <span class="s1">&#39;s/.*Disconnected from //&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>username@ubuntu:~$ ssh myserver <span class="s1">&#39;journalctl | grep --line-buffer ssh | grep --line-buffer &quot;Disconnected from&quot;&#39;</span> &gt; ssh.log
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed <span class="s1">&#39;s/.*Disconnected from //&#39;</span>
 </code></pre></div>
 注：正则表达式</p>
 <ul>
@@ -1977,29 +2067,29 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
 <li>正则表达式默认不会跨行匹配</li>
 </ul>
 <p>示例
-<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//&#39;</span>
 <a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>bc
-<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;bc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//&#39;</span>
+<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;bc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//&#39;</span>
 <a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a>c
-<a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//g&#39;</span>
+<a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ab]//g&#39;</span>
 <a id="__codelineno-73-6" name="__codelineno-73-6" href="#__codelineno-73-6"></a>c
 </code></pre></div></p>
 <p><code>sed</code> 不支持一些正则表达式规则，需要添加 <code>-E</code>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/(ab)*//g&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed <span class="s1">&#39;s/(ab)*//g&#39;</span>
 <a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>abcabc
-<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab)*//g&#39;</span>
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab)*//g&#39;</span>
 <a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>cc
-<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab|bc)*//g&#39;</span>
+<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;abcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab|bc)*//g&#39;</span>
 <a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a>cc
-<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;bcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab|bc)*//g&#39;</span>
+<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;bcabc&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/(ab|bc)*//g&#39;</span>
 <a id="__codelineno-74-8" name="__codelineno-74-8" href="#__codelineno-74-8"></a>c
 </code></pre></div></p>
 <p>使用更复杂一点的正则表达式进行匹配与替换
-<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;sample_string Disconnected from user username 127.0.0.1 port 1234&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user .* [0-9.]+ port [0-9]+$/changed string/&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;sample_string Disconnected from user username 127.0.0.1 port 1234&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user .* [0-9.]+ port [0-9]+$/changed string/&#39;</span>
 <a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>changed string
 </code></pre></div></p>
 <p>捕获正则表达式中的组
-<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;sample_string Disconnected from user username 127.0.0.1 port 1234&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;sample_string Disconnected from user username 127.0.0.1 port 1234&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span>
 <a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>username
 </code></pre></div></p>
 <p>正则表达式调试器：regex101.com
@@ -2012,45 +2102,45 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
 <li><a href="emailregex.com">Email Address Regular Expression That 99.99% Works. Disagree? Join discussion!</a></li>
 </ul>
 <p>通过 <code>wc -l</code> 统计行数</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> wc -l
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> wc -l
 <a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="m">117</span>
 </code></pre></div>
 <p>通过 <code>sort</code> 进行排序；</p>
 <p>通过 <code>uniq</code> 将多次出现的相同内容变成一次，<code>unic -c</code> 可以在打印值的同时显示每个值出现的次数</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> wc -l
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> wc -l
 </code></pre></div>
 <p><code>awk</code> 与 <code>paste</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span> <span class="p">|</span> paste -sd,
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span> <span class="p">|</span> paste -sd,
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;$1 == 1 &amp;&amp; $2 ~ /^c.*e$/ {print $0}&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;$1 == 1 &amp;&amp; $2 ~ /^c.*e$/ {print $0}&#39;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;BEGIN { rows = 0 } $1 == 1 &amp;&amp; $2 ~ /^c.*e$/ { rows += 1 } END { print rows }&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n10 <span class="p">|</span> awk <span class="s1">&#39;BEGIN { rows = 0 } $1 == 1 &amp;&amp; $2 ~ /^c.*e$/ { rows += 1 } END { print rows }&#39;</span>
 </code></pre></div>
 <p>通过 <code>xargs</code> 接收列表并转换为参数（arguments）
-<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>void@ubuntu:~$ rustup toolchain list <span class="p">|</span> grep nightly <span class="p">|</span> grep -v <span class="s1">&#39;nightly-x86&#39;</span> <span class="p">|</span> grep <span class="m">2019</span> <span class="p">|</span> sed <span class="s1">&#39;s/-x86.*//&#39;</span> <span class="p">|</span> xargs rustup toolchain uninstall
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>username@ubuntu:~$ rustup toolchain list <span class="p">|</span> grep nightly <span class="p">|</span> grep -v <span class="s1">&#39;nightly-x86&#39;</span> <span class="p">|</span> grep <span class="m">2019</span> <span class="p">|</span> sed <span class="s1">&#39;s/-x86.*//&#39;</span> <span class="p">|</span> xargs rustup toolchain uninstall
 </code></pre></div></p>
 <p>打印出来处理后的到的命令
-<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>void@ubuntu:~$ rustup toolchain list <span class="p">|</span> grep nightly <span class="p">|</span> grep -v <span class="s1">&#39;nightly-x86&#39;</span> <span class="p">|</span> grep <span class="m">2019</span> <span class="p">|</span> sed <span class="s1">&#39;s/-x86.*//&#39;</span> <span class="p">|</span> xargs <span class="nb">echo</span> rustup toolchain uninstall 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>username@ubuntu:~$ rustup toolchain list <span class="p">|</span> grep nightly <span class="p">|</span> grep -v <span class="s1">&#39;nightly-x86&#39;</span> <span class="p">|</span> grep <span class="m">2019</span> <span class="p">|</span> sed <span class="s1">&#39;s/-x86.*//&#39;</span> <span class="p">|</span> xargs <span class="nb">echo</span> rustup toolchain uninstall 
 </code></pre></div></p>
 <p>通过 <code>bc</code> (Berkeley Calculator) 进行计算
-<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>void@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;1 + 2&quot;</span> <span class="p">|</span> bc -l
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>username@ubuntu:~$ <span class="nb">echo</span> <span class="s2">&quot;1 + 2&quot;</span> <span class="p">|</span> bc -l
 <a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a><span class="m">3</span>
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> awk <span class="s1">&#39;$1 != 1 { print $1 }&#39;</span> <span class="p">|</span> paste -sd+ <span class="p">|</span> bc -l
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> awk <span class="s1">&#39;$1 != 1 { print $1 }&#39;</span> <span class="p">|</span> paste -sd+ <span class="p">|</span> bc -l
 </code></pre></div>
 <p>通过 R 语言进行计算
-<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> awk <span class="s1">&#39;$1 != 1 { print $1 }&#39;</span> <span class="p">|</span> R --slave -e <span class="s1">&#39;x &lt;- scan(file=&quot;stdin&quot;, quiet=TRUE); summary(x)&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> awk <span class="s1">&#39;$1 != 1 { print $1 }&#39;</span> <span class="p">|</span> R --slave -e <span class="s1">&#39;x &lt;- scan(file=&quot;stdin&quot;, quiet=TRUE); summary(x)&#39;</span>
 </code></pre></div></p>
 <p>通过 <code>gnuplot</code> 绘图</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>void@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n5 <span class="p">|</span> gnuplot -p -e <span class="s1">&#39;set boxwidth 0.5; plot &quot;-&quot; using 1:xtic(2) with boxes&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>username@ubuntu:~$ cat ssh.log <span class="p">|</span> sed -E <span class="s1">&#39;s/^.*Disconnected from (invalid )?user (.*) [0-9.]+ port [0-9]+$/\2/&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nk1,1 <span class="p">|</span> tail -n5 <span class="p">|</span> gnuplot -p -e <span class="s1">&#39;set boxwidth 0.5; plot &quot;-&quot; using 1:xtic(2) with boxes&#39;</span>
 </code></pre></div>
 <h4 id="83">8.3 二进制文件处理</h4>
 <p>从视频中提取第一帧，转换为图像，将颜色空间转换为灰色，然后压缩，并通过 <code>ssh</code> 传输到远程机器，在远程机器保存，然后传回来
-<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>void@ubuntu:~$ ffmpeg -loglevel panic -i /dev/video0 -frame <span class="m">1</span> -f image2 - <span class="p">|</span> convert - -colorspace gray - <span class="p">|</span> gzip <span class="p">|</span> ssh myserver <span class="s1">&#39;gzip -d | tee copy.png&#39;</span> <span class="p">|</span> feh -
+<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>username@ubuntu:~$ ffmpeg -loglevel panic -i /dev/video0 -frame <span class="m">1</span> -f image2 - <span class="p">|</span> convert - -colorspace gray - <span class="p">|</span> gzip <span class="p">|</span> ssh myserver <span class="s1">&#39;gzip -d | tee copy.png&#39;</span> <span class="p">|</span> feh -
 </code></pre></div>
 其中，<code>/dev/video0</code> 为摄像头，<code>-</code> 表示标准输出、标准输入</p>
 <h2 id="9">9 工具推荐</h2>
@@ -2123,7 +2213,7 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>username@ubuntu:~/tools$ <span class="o">[</span> -f ~/.fzf.zsh <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.fzf.zsh
 </code></pre></div>
 暂未知道其意义，在执行上述 <code>fzf</code> 命令之前未执行这个命令，上述 <code>fzf</code> 命令也正常运行了</p>
-<p>(2) 提到了将 <code>Ctrl+R</code> 和 fzf 绑定，但是我没有理解如何实现</p>
+<p>(2) 提到了将 <code>Ctrl + R</code> 和 fzf 绑定，但是我没有理解如何实现</p>
 <h4 id="93-tree">9.3 <code>tree</code> 示例</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>username@ubuntu:~/tools$ tree .
 <a id="__codelineno-99-2" name="__codelineno-99-2" href="#__codelineno-99-2"></a>.
@@ -2185,13 +2275,13 @@ pipe 不只针对文本，对图像、其他二进制文件等都适用。</p>
       
       
         
-        <a href="../Vim/" class="md-footer__link md-footer__link--next" aria-label="Next: Vim" rel="next">
+        <a href="../%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%8E%AF%E5%A2%83/" class="md-footer__link md-footer__link--next" aria-label="Next: 命令行环境" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Vim
+              命令行环境
             </div>
           </div>
           <div class="md-footer__button md-icon">
