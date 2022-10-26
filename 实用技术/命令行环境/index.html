@@ -451,6 +451,26 @@
     2 终端多路复用器（Terminal Multiplexers）
   </a>
   
+    <nav class="md-nav" aria-label="2 终端多路复用器（Terminal Multiplexers）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-tmux-3" class="md-nav__link">
+    2.1 tmux 中的 3 个核心概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-tmux" class="md-nav__link">
+    2.2 tmux 的基本使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -544,6 +564,20 @@
           深度学习
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        深度学习简介
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -648,6 +682,26 @@
   <a href="#2-terminal-multiplexers" class="md-nav__link">
     2 终端多路复用器（Terminal Multiplexers）
   </a>
+  
+    <nav class="md-nav" aria-label="2 终端多路复用器（Terminal Multiplexers）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-tmux-3" class="md-nav__link">
+    2.1 tmux 中的 3 个核心概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-tmux" class="md-nav__link">
+    2.2 tmux 的基本使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -911,6 +965,30 @@ signal.py
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="o">[</span><span class="m">2</span><span class="o">]</span>-  Stopped                 sleep <span class="m">2000</span>
 </code></pre></div></p>
 <h2 id="2-terminal-multiplexers">2 终端多路复用器（Terminal Multiplexers）</h2>
+<p>为了同时在 terminal 进行多项工作，我们可能经常会打开多个 terminal 窗口，但是终端多路复用器可以更方便地达到这个目的。</p>
+<p>使用 tmux 可以创建不同的工作空间。也可以使用一些比较旧的工具，如 screen。</p>
+<h4 id="21-tmux-3">2.1 tmux 中的 3 个核心概念</h4>
+<ul>
+<li>sessions</li>
+<li>windows：类似于其他编辑器或者浏览器中的标签</li>
+<li>panes</li>
+</ul>
+<p>三者的关系：panes in windows, windows in sessions</p>
+<h4 id="22-tmux">2.2 tmux 的基本使用</h4>
+<ul>
+<li>通过 <code>tmux</code> 开启一个 session，看上去与之前的 shell 没什么区别，但是这个新开启的 session 与之前的 shell 进程是分开的</li>
+<li>通过 <code>tmux new -s session名称</code> 在创建 session 时指定 session 的名称</li>
+<li>通过 <code>tmux new -s session名称 -t group名称</code> 在创建 session 时指定 session 的名称和这个 session 所属的 group 的名称</li>
+<li>通过 <code>Ctrl-B-D</code> 退出 session（先按 <code>Ctrl-B</code>，这两个键都松开，再按 <code>D</code>），也可以通过键入 <code>tmux detach</code> 退出 session</li>
+<li>通过 <code>tmux a</code> 回到最近退出的且还存在的 session</li>
+<li>通过 <code>tmux a -t session名称</code> 指定要回到的 session 的名称</li>
+<li>通过 <code>Ctrl-D</code> 关闭当前 session</li>
+<li>在 session 中，通过 <code>Ctrl-B-:</code> 进入命令行模式（先按 <code>Ctrl-B</code>，这两个键都松开，再按 <code>`Shift-;</code>）</li>
+<li>在 session 中通过 <code>Ctrl-B-C</code> 创建并打开一个新的 window</li>
+<li>在 windows 中通过 <code>Ctrl-B-P</code> 进入上一个 window（P 代表 previous）</li>
+<li>在 windows 中通过 <code>Ctrl-B-N</code> 进入下一个 window（N 代表 next）</li>
+<li>在 windows 中通过 <code>Ctrl-B-编号</code> 进入下一个 指定编号的 window</li>
+</ul>
 <h2 id="3-dotfiles">3 通过“点文件”（Dotfiles）配置环境</h2>
 <h2 id="4-remote-machines">4 远程机器（Remote Machines）</h2>
 <h2 id="_1">参考</h2>
