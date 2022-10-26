@@ -34,7 +34,7 @@ nav:
     - opengl: 未完成.md
   - LeetCode:
     - 学习计划-数据结构: LeetCode/学习计划_数据结构.md
-  - 实用技术: 
+  - 实用技术:
     - Git 与 GitHub:
       - 1 上传此博客到 GitHub: 实用技术/Git与GitHub/1_上传此博客到GitHub.md
     - Shell: 实用技术/Shell.md
@@ -42,6 +42,7 @@ nav:
     - Vim: 实用技术/Vim.md
     - 实用工具: 实用技术/实用工具.md
   - 深度学习:
+    - 深度学习简介: 深度学习/深度学习简介.md
     # - 知识蒸馏: 未完成.md
     - 计算机视觉: 未完成.md
     - 自然语言处理: 未完成.md
