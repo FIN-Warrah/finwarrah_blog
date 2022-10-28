@@ -478,6 +478,47 @@
     3 通过“点文件”（Dotfiles）配置环境
   </a>
   
+    <nav class="md-nav" aria-label="3 通过“点文件”（Dotfiles）配置环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 查看现有别名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 临时别名的创建、使用与查询
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 永久修改别名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-bash" class="md-nav__link">
+    3.4 修改 bash 提示字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-dotfile" class="md-nav__link">
+    3.5 其他程序的 dotfile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -709,6 +750,47 @@
   <a href="#3-dotfiles" class="md-nav__link">
     3 通过“点文件”（Dotfiles）配置环境
   </a>
+  
+    <nav class="md-nav" aria-label="3 通过“点文件”（Dotfiles）配置环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 查看现有别名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 临时别名的创建、使用与查询
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 永久修改别名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-bash" class="md-nav__link">
+    3.4 修改 bash 提示字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-dotfile" class="md-nav__link">
+    3.5 其他程序的 dotfile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -985,11 +1067,96 @@ signal.py
 <li>通过 <code>Ctrl-D</code> 关闭当前 session</li>
 <li>在 session 中，通过 <code>Ctrl-B-:</code> 进入命令行模式（先按 <code>Ctrl-B</code>，这两个键都松开，再按 <code>`Shift-;</code>）</li>
 <li>在 session 中通过 <code>Ctrl-B-C</code> 创建并打开一个新的 window</li>
-<li>在 windows 中通过 <code>Ctrl-B-P</code> 进入上一个 window（P 代表 previous）</li>
-<li>在 windows 中通过 <code>Ctrl-B-N</code> 进入下一个 window（N 代表 next）</li>
-<li>在 windows 中通过 <code>Ctrl-B-编号</code> 进入下一个 指定编号的 window</li>
+<li>在 window 中通过 <code>Ctrl-B-P</code> 进入上一个 window（P 代表 previous）</li>
+<li>在 window 中通过 <code>Ctrl-B-N</code> 进入下一个 window（N 代表 next）</li>
+<li>在 window 中通过 <code>Ctrl-B-编号</code> 进入下一个 指定编号的 window（window 编号从 0 开始）</li>
+<li>在 window 中通过 <code>Ctrl-B-,</code> 重命名 window</li>
+<li>通过 <code>Ctrl-B-"</code> 将当前 window 在水平方向上分隔，在当前 terminal 再打开一个界面（pane）</li>
+<li>通过 <code>Ctrl-B-%</code> 将当前 window 在竖直方向上分隔，在当前 terminal 再打开一个界面（pane）</li>
+<li>通过 <code>Ctrl-B-space</code> 将当前的 panes 水平等分排列，之后再次按 <code>Ctrl-B-space</code> 可以切换多种布局方式</li>
+<li>通过 <code>Ctrl-B-方向键</code> 切换所在的 pane</li>
+<li>通过 <code>Ctrl-B-Z</code> 令当前的 pane 填充整个 terminal，再次按下 <code>Ctrl-B-Z</code> 恢复到多个 pane</li>
+<li>在 window 中通过 <code>Ctrl-B-W</code> 打开当前 session 中的 window 列表，通过上下方向键和 <code>ENTER</code> 键选择（切换）window，通过左右方向键可以打开 window 的 pane</li>
+<li>（我发现）在同一个 group 中的不同的 session 拥有相同的 windows</li>
 </ul>
 <h2 id="3-dotfiles">3 通过“点文件”（Dotfiles）配置环境</h2>
+<h4 id="31">3.1 查看现有别名</h4>
+<p>通过 <code>alias</code> 查看现有别名
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>username@ubuntu:~/Desktop$ <span class="nb">alias</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">alias</span> <span class="nv">alert</span><span class="o">=</span><span class="s1">&#39;notify-send --urgency=low -i &quot;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&quot; &quot;$(history|tail -n1|sed -e &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;)&quot;&#39;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -alF&#39;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+</code></pre></div></p>
+<h4 id="32">3.2 临时别名的创建、使用与查询</h4>
+<p>通过 <code>alias 新命令="原命令"</code> 创建别名
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>username@ubuntu:~$ <span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s2">&quot;ls -lah&quot;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>username@ubuntu:~$ ll
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>total 88K
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>drwxr-xr-x <span class="m">16</span> username username <span class="m">4</span>.0K Oct <span class="m">24</span> <span class="m">09</span>:29 .
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>drwxr-xr-x  <span class="m">4</span> root     root     <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:17 ..
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>-rw-------  <span class="m">1</span> username username <span class="m">1</span>.2K Oct <span class="m">26</span> <span class="m">19</span>:34 .bash_history
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>-rw-r--r--  <span class="m">1</span> username username  <span class="m">220</span> Feb <span class="m">25</span>  <span class="m">2020</span> .bash_logout
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>-rw-r--r--  <span class="m">1</span> username username <span class="m">3</span>.7K Feb <span class="m">25</span>  <span class="m">2020</span> .bashrc
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>drwxr-xr-x <span class="m">11</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:19 .cache
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>drwxrwxr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">24</span> <span class="m">09</span>:21 cmdlinetest
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>drwx------ <span class="m">14</span> username username <span class="m">4</span>.0K Oct <span class="m">26</span> <span class="m">20</span>:40 .config
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">24</span> <span class="m">09</span>:31 Desktop
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 Documents
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 Downloads
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>drwx------  <span class="m">3</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 .gnupg
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>drwxr-xr-x  <span class="m">3</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 .local
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 Music
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 .parallels
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 Pictures
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>-rw-r--r--  <span class="m">1</span> username username  <span class="m">807</span> Feb <span class="m">25</span>  <span class="m">2020</span> .profile
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 Public
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>-rw-------  <span class="m">1</span> username username    <span class="m">7</span> Oct <span class="m">22</span> <span class="m">21</span>:21 .python_history
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>-rw-r--r--  <span class="m">1</span> username username    <span class="m">0</span> Oct <span class="m">22</span> <span class="m">21</span>:20 .sudo_as_admin_successful
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 Templates
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>drwxr-xr-x  <span class="m">2</span> username username <span class="m">4</span>.0K Oct <span class="m">22</span> <span class="m">21</span>:18 Videos
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>-rw-------  <span class="m">1</span> username username  <span class="m">881</span> Oct <span class="m">22</span> <span class="m">21</span>:21 .viminfo
+</code></pre></div>
+注：创建的别名之前可能是其他的命令，请避免覆盖掉需要使用的命令。例如，对于我的 Ubuntu 22.04 环境，<code>ll</code> 之前是其他命令</p>
+<p>也可以为经常写错的命令创建别名，例如
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>username@ubuntu:~$ <span class="nb">alias</span> <span class="nv">sl</span><span class="o">=</span>ls
+</code></pre></div>
+注：根据个人习惯决定是否这样处理，因为错误也是一种有用的反馈。此外，这种处理也可能会引发一些问题，例如，将本来就存在的命令或程序覆盖。</p>
+<p>可以用于省略参数，例如
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>username@ubuntu:~$ <span class="nb">alias</span> <span class="nv">mv</span><span class="o">=</span><span class="s2">&quot;mv -i&quot;</span>
+</code></pre></div></p>
+<p>通过 <code>alias 命令</code> 查看这个命令是什么命令的别名
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>username@ubuntu:~$ <span class="nb">alias</span> ll
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -lah&#39;</span>
+</code></pre></div></p>
+<h4 id="33">3.3 永久修改别名</h4>
+<p>bash 的配置保存在当前用户 home 的 .bashrc 文件中</p>
+<p>查看 当前用户的 .bashrc 文件，可以在其中添加别名，例如
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">alias</span> <span class="nv">sl</span><span class="o">=</span>ls
+</code></pre></div>
+通过 <code>source ~/.bashrc</code> 使其生效
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>username@ubuntu:~/Desktop$ <span class="nb">source</span> ~/.bashrc
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>username@ubuntu:~/Desktop$ sl
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a> nohup.out  <span class="s1">&#39;Parallels Shared Folders&#39;</span>
+</code></pre></div></p>
+<p>也可以通过执行 <code>bash</code> 命令，或者重新打开 terminal 使其生效</p>
+<h4 id="34-bash">3.4 修改 bash 提示字符串</h4>
+<p>通过 <code>PS1="要定义的字符串格式"</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>username@ubuntu:~$ <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;&gt; &quot;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>&gt;
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>username@ubuntu:~/Desktop$ <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\w &gt;&quot;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>~/Desktop &gt;
+</code></pre></div>
+<p>同样可以将这些内容写在 ~/.bashrc 中使其永久生效</p>
+<h4 id="35-dotfile">3.5 其他程序的 dotfile</h4>
+<p>很多其他程序也有 dotfile</p>
+<p>例如 vim（其 dotfile 为 ～/.vimrc）</p>
+<p>alacritty 等终端模拟器也有 dotfile（其 dotfile 为 ~/.config/alacritty/alacritty.yml）</p>
 <h2 id="4-remote-machines">4 远程机器（Remote Machines）</h2>
 <h2 id="_1">参考</h2>
 <ul>
