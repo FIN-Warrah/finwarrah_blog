@@ -516,6 +516,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#36-dotfiles" class="md-nav__link">
+    3.6 Dotfiles 相关资料
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-dotfiles" class="md-nav__link">
+    3.7 一些 dotfiles 相关工具
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -525,6 +539,54 @@
   <a href="#4-remote-machines" class="md-nav__link">
     4 远程机器（Remote Machines）
   </a>
+  
+    <nav class="md-nav" aria-label="4 远程机器（Remote Machines）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1 应用场景举例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-ssh" class="md-nav__link">
+    4.2 通过 ssh，使用密码连接远程机器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-ssh" class="md-nav__link">
+    4.3 通过 ssh，使用密钥连接远程机器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4 将文件上传到远程机器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5 断开与远程机器的连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-tmux" class="md-nav__link">
+    4.6 在本地机器和远程机器同时使用 tmux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -789,6 +851,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#36-dotfiles" class="md-nav__link">
+    3.6 Dotfiles 相关资料
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-dotfiles" class="md-nav__link">
+    3.7 一些 dotfiles 相关工具
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -798,6 +874,54 @@
   <a href="#4-remote-machines" class="md-nav__link">
     4 远程机器（Remote Machines）
   </a>
+  
+    <nav class="md-nav" aria-label="4 远程机器（Remote Machines）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1 应用场景举例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-ssh" class="md-nav__link">
+    4.2 通过 ssh，使用密码连接远程机器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-ssh" class="md-nav__link">
+    4.3 通过 ssh，使用密钥连接远程机器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4 将文件上传到远程机器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5 断开与远程机器的连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-tmux" class="md-nav__link">
+    4.6 在本地机器和远程机器同时使用 tmux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1157,7 +1281,126 @@ signal.py
 <p>很多其他程序也有 dotfile</p>
 <p>例如 vim（其 dotfile 为 ～/.vimrc）</p>
 <p>alacritty 等终端模拟器也有 dotfile（其 dotfile 为 ~/.config/alacritty/alacritty.yml）</p>
+<h4 id="36-dotfiles">3.6 Dotfiles 相关资料</h4>
+<ul>
+<li>其他人配置的 dotfiles：在 github 搜索 dotfiles</li>
+<li><a href="https://dotfiles.github.io/utilities">General-purpose dotfiles utilities</a></li>
+</ul>
+<h4 id="37-dotfiles">3.7 一些 dotfiles 相关工具</h4>
+<ul>
+<li>GNU Stow：将 home 中的 dotfiles 放入一个 dotfiles 目录中，通过符号链接将其与 home 中的 dotfiles 对应</li>
+</ul>
 <h2 id="4-remote-machines">4 远程机器（Remote Machines）</h2>
+<h4 id="41">4.1 应用场景举例</h4>
+<ul>
+<li>Athena 集群</li>
+<li>实验室服务器</li>
+</ul>
+<h4 id="42-ssh">4.2 通过 ssh，使用密码连接远程机器</h4>
+<p>语法：<code>ssh 远程机器用户名@远程机器IP或域名</code></p>
+<p>如果配置为使用密码连接，则会要求键入远程机器这个用户的密码
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>localuser@localmachine:~$ ssh remoteuser@192.168.3.231
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>The authenticity of host <span class="s1">&#39;192.168.3.231 (192.168.3.231)&#39;</span> can<span class="s1">&#39;t be established.</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="s1">ED25519 key fingerprint is SHA256:(这里的内容我隐藏掉了).</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="s1">This key is not known by any other names</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="s1">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="s1">Warning: Permanently added &#39;</span><span class="m">192</span>.168.3.231<span class="s1">&#39; (ED25519) to the list of known hosts.</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="s1">remoteuser@192.168.3.231&#39;</span>s password:
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>Welcome to Ubuntu <span class="m">20</span>.04.3 LTS <span class="o">(</span>GNU/Linux <span class="m">5</span>.15.0-52-generic aarch64<span class="o">)</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a> * Documentation:  https://help.ubuntu.com
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a> * Management:     https://landscape.canonical.com
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a> * Support:        https://ubuntu.com/advantage
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="m">104</span> updates can be applied immediately.
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="m">4</span> of these updates are standard security updates.
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>To see these additional updates run: apt list --upgradable
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a>Your Hardware Enablement Stack <span class="o">(</span>HWE<span class="o">)</span> is supported <span class="k">until</span> April <span class="m">2025</span>.
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a>The programs included with the Ubuntu system are free software<span class="p">;</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>the exact distribution terms <span class="k">for</span> each program are described <span class="k">in</span> the
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a>individual files <span class="k">in</span> /usr/share/doc/*/copyright.
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a>Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a>applicable law.
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a>$
+</code></pre></div></p>
+<p>然后就可以对远程机器执行命令了</p>
+<p>也可以在连接 ssh 的时候在远程机器执行命令
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>localuser@localmachine:~$ ssh remoteuser@192.168.3.231 ls -al
+</code></pre></div></p>
+<h4 id="43-ssh">4.3 通过 ssh，使用密钥连接远程机器</h4>
+<p>创建 ssh 密钥对
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">(</span>base<span class="o">)</span> localuser@localmachine:~$ ssh-keygen -o -a <span class="m">100</span> -t ed25519
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>Generating public/private ed25519 key pair.
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Enter file <span class="k">in</span> which to save the key <span class="o">(</span>/home/localuser/.ssh/id_ed25519<span class="o">)</span>: /home/localuser/.ssh/id_ed25519_ubuntu
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>Enter same passphrase again:
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>Your identification has been saved <span class="k">in</span> /home/localuser/id_ed25519
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>Your public key has been saved <span class="k">in</span> /home/localuser/id_ed25519.pub
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>The key fingerprint is:
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="o">(</span>这里的内容我隐藏掉了<span class="o">)</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>The key<span class="err">&#39;</span>s randomart image is:
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="o">(</span>这里的内容我隐藏掉了<span class="o">)</span>
+</code></pre></div>
+注：</p>
+<ul>
+<li>密钥对默认存放在当前用户 home 的 .ssh 目录下</li>
+<li>通过对私钥进行加密，避免其他人拿到私钥后直接伪造身份</li>
+</ul>
+<p>将公钥的内容传输到远程机器，写入到 authorized_keys 文件中
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>cat /home/localuser/.ssh/id_ed25519.pub <span class="p">|</span> ssh remoteuser@192.168.3.231 tee .ssh/authorized_keys
+</code></pre></div>
+注：如果远程机器用户的 home 中没有 .ssh，则可以执行 <code>ssh localhost</code>，.ssh 目录就会出现了</p>
+<p>然后登录远程机器
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>ssh remoteuser@192.168.3.231
+</code></pre></div>
+注：可能要求输入密钥的密码（如果在生成密钥的时候设置了）</p>
+<p>如果仍然要求输入密码（ssh 的密码。不是密钥的密码），或无法登录，则需要在远程机器修改 .ssh 目录和 authorized_keys 文件的权限
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>remoteuser@ubuntu:~$ chmod <span class="m">700</span> .ssh
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>remoteuser@ubuntu:~$ chmod <span class="m">600</span> .ssh/authorized_keys
+</code></pre></div>
+然后重新登录。</p>
+<p>可以通过 .ssh/config 对 ssh 进行配置 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Host ubuntu_vm
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>  Hostname 192.168.3.231
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>  User remoteuser
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>  IdentityFile 当前用户的 home 路径/.ssh/id_ed25519_ubuntu
+</code></pre></div>
+注：未尝试的属性：<code>RemoteForward</code></p>
+<p>然后连接远程机器
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>ssh ubuntu_vm
+</code></pre></div></p>
+<p>另一种将公钥上传到远程机器的方式：<code>ssh-copy-id</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>ssh-copy-id 远程机器用户名@远程机器IP或域名
+</code></pre></div></p>
+<p>也可以为这个远程机器创建一个名称，以后通过 ssh 连接远程机器时可以使用这个名称代替 <code>远程机器用户名@远程机器IP或域名</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>ssh-copy-id 远程机器用户名@远程机器IP或域名 远程机器名称
+</code></pre></div></p>
+<h4 id="44">4.4 将文件上传到远程机器</h4>
+<ul>
+<li>scp</li>
+<li>rsync</li>
+</ul>
+<p>通过 <code>scp</code> 命令将文件上传到远程机器</p>
+<p>命令格式：<code>scp 文件路径 远程机器用户名@远程机器IP或域名:远程机器路径</code>；如果是上传目录及其中的文件，则添加参数 <code>-r</code>，即，命令为 <code>scp -r 文件路径 远程机器用户名@远程机器IP或域名:远程机器路径</code></p>
+<p>通过 <code>rsync</code> 传输文件或目录
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>rsync -avP 路径 远程机器用户名@远程机器IP或域名:远程机器路径
+</code></pre></div>
+这三个参数可以令 rsync 尽可能保留所有权限、尝试查看文件是否已被复制，从停止的地方继续</p>
+<h4 id="45">4.5 断开与远程机器的连接</h4>
+<ul>
+<li>logout</li>
+<li>exit</li>
+</ul>
+<h4 id="46-tmux">4.6 在本地机器和远程机器同时使用 tmux</h4>
+<ul>
+<li>让本地机器和远程机器的 tmux 命令前缀不通，例如，将本地机器的 tmux 命令前缀设置为 <code>Ctrl-A</code>，而远程机器的 tmux 命令前缀为 <code>Ctrl-B</code>（如果前缀相同，那么连续执行两次前缀，是否能将命令传递到远程机器？（未验证））</li>
+<li>让本地机器和远程机器的配置不同，如tmux底部那一行的颜色</li>
+</ul>
 <h2 id="_1">参考</h2>
 <ul>
 <li><a href="https://missing.csail.mit.edu/2020/course-shell/">MIT-Missing-Semester</a></li>
