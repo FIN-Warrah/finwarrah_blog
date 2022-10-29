@@ -35,8 +35,9 @@ nav:
   - LeetCode:
     - 学习计划-数据结构: LeetCode/学习计划_数据结构.md
   - 实用技术:
-    - Git 与 GitHub:
-      - 1 上传此博客到 GitHub: 实用技术/Git与GitHub/1_上传此博客到GitHub.md
+    - 版本控制（Git）: 实用技术/版本控制（Git）.md
+    # - Git 与 GitHub:
+    #   - 1 上传此博客到 GitHub: 实用技术/Git与GitHub/1_上传此博客到GitHub.md
     - Shell: 实用技术/Shell.md
     - 命令行环境: 实用技术/命令行环境.md
     - Vim: 实用技术/Vim.md
