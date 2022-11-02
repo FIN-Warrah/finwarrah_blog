@@ -30,6 +30,11 @@ repo_name: FIN-Warrah's Blog
 repo_url: https://github.com/FIN-Warrah/finwarrah_blog/
 
 nav:
+  - 编程入门:
+    - 基础知识与概念: 编程入门/基础知识与概念.md
+  - 编程语言:
+    - C:
+      - C语言入门: 编程语言/C/C语言入门.md
   - 计算机图形学:
     - opengl: 未完成.md
   - LeetCode:
